@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:onClick="openMenu"
             android:src="@drawable/menus"/>
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:onClick="openCard"
             android:src="@drawable/cartao_refeicao"/>
@@ -50,8 +52,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.1"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:onClick="openContacts"
             android:src="@drawable/contactos"/>

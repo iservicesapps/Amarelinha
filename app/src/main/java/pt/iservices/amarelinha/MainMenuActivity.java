@@ -1,6 +1,7 @@
 package pt.iservices.amarelinha;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MainMenuActivity extends Activity {
     }
 
     public void openContacts(View v) {
-        Log.d("teste", "contacts!");
+        Intent mainIntent = new Intent(this, ContactsActivity.class);
+        startActivity(mainIntent);
     }
 }
