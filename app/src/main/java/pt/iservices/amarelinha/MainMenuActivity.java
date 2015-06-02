@@ -6,11 +6,11 @@ import android.os.Bundle;
 /**
  * Created by mariocosme on 02/06/15.
  */
-public class Splash extends Activity {
+public class MainMenuActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_activity);
+        setContentView(R.layout.main_menu_activity);
     }
 }
