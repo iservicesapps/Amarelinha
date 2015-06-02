@@ -3,6 +3,9 @@ package pt.iservices.amarelinha;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -19,8 +22,13 @@ public class ContactsActivity extends Activity {
     }
 
     private void setUpLayout() {
+        // TODO chalkboard doens't work (maybe .ttf?)
         Typeface chalkboard = Typeface.createFromAsset(getAssets(), "fonts/Chalkboard.ttc");
         TextView titleTV = (TextView) findViewById(R.id.titleTV);
         titleTV.setTypeface(chalkboard);
+    }
+
+    public void call(View v) {
+        Log.d("teste", "call xpto");
     }
 }

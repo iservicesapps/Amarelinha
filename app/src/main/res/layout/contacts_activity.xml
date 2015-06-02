@@ -23,6 +23,62 @@
         android:textSize="28dp"
         android:textColor="#404041"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/telhaTop"
+        android:weightSum="1"
+        android:layout_above="@+id/telhaBottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:text="AMARELINHA BURGUERS nasceu de um conceito inovador em ANGOLA priorizando o Fast Food.\n\n2011 foi o ano em que surgiu a ideia da criação da mesma e em Janeiro de 2012 começou-se a trabalhar afincadamente neste projecto.\n\nAMARELINHA BURGUERS é uma empresa jovem no mercado Angolano na área de restauração com o objectivo de proporcionar ao Angolanos um serviço fidedigno e com qualidade, prestamos um serviço personalizado e eficiente.\n\nEsta qualidade reflete-se na metodologia e ino"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="Horário"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="Seg - Sex:\n9am às 10pm\n\nSábado:\n9pm às 11pm"/>
+
+            <Button
+                android:id="@+id/callBt"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Telefonar"
+                android:onClick="call"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/telhaBottom"
         android:layout_width="match_parent"
