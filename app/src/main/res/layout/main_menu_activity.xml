@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/telhaTop"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/telha"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/telhaTop"
+        android:layout_above="@+id/telhaBottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="openMenu"
+            android:src="@drawable/menus"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="openCard"
+            android:src="@drawable/cartao_refeicao"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="openContacts"
+            android:src="@drawable/contactos"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/telhaBottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/telhas_rotated"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
 
 </RelativeLayout>
