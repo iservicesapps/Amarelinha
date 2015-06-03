@@ -17,40 +17,40 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="Contactos"
-        android:textStyle="bold"
-        android:textSize="28dp"
+        android:textSize="26sp"
         android:textColor="#404041"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/telhaTop"
-        android:weightSum="1"
         android:layout_above="@+id/telhaBottom">
 
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/companyDescTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
             android:gravity="center"
-            android:text="AMARELINHA BURGUERS nasceu de um conceito inovador em ANGOLA priorizando o Fast Food.\n\n2011 foi o ano em que surgiu a ideia da criação da mesma e em Janeiro de 2012 começou-se a trabalhar afincadamente neste projecto.\n\nAMARELINHA BURGUERS é uma empresa jovem no mercado Angolano na área de restauração com o objectivo de proporcionar ao Angolanos um serviço fidedigno e com qualidade, prestamos um serviço personalizado e eficiente.\n\nEsta qualidade reflete-se na metodologia e ino"/>
+            android:scrollbars="vertical"
+            android:text="Amarelinha Hamburguer's é uma pequena empresa de jovens angolanos que nasceu de um sonho... Fazer os melhores lanches da cidade (Hamburgueres, Bifanas, Pregos, Fahitas, entre outros) e prestar um bom serviço aos seus clientes!\nEm 2012 começavamos esta aventura!\n\nO nosso objectivo é de proporcionar aos Angolanos, um serviço fidedigno e com qualidade, prestar um serviço personalizado e eficiente.\n\nTemos sempre como objectivo, a qualidade da oferta, a eficiência do serviço e a satisfação do cliente, por isso, colocamos todo o nosso amor no nosso producto.\n\n\nOs nossos Produtos são artesanais (produzimos a nossa própria carne e muito em breve os seremos nós a produzir o nosso pão), tudo feito com bastante amor e carinho.\n\n\nAgora que já sabe um pouco a nosso respeito esteja atento às nossas redes sociais, participe nos nossos passatempos com direito a lanches de oferta e sempre que fizer uma compra, peça o seu código para inserir na zona do &quot;cartão de refeição&quot;, quando acumular 10 códigos terá direito a um lanche de oferta à sua escolha." />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/horarioTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -59,6 +59,7 @@
                 android:textSize="24sp"/>
 
             <TextView
+                android:id="@+id/horarioDescTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
@@ -71,7 +72,9 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:text="Telefonar"
+                android:textColor="#FFFFFF"
                 android:onClick="call"
+                android:background="@drawable/call_button_shape"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 

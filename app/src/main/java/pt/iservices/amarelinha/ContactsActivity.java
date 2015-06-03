@@ -1,8 +1,11 @@
 package pt.iservices.amarelinha;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,13 +25,23 @@ public class ContactsActivity extends Activity {
     }
 
     private void setUpLayout() {
-        // TODO chalkboard doens't work (maybe .ttf?)
-        Typeface chalkboard = Typeface.createFromAsset(getAssets(), "fonts/Chalkboard.ttc");
+        Typeface chalkboardBold = Typeface.createFromAsset(getAssets(), "fonts/Chalkboard-Bold.ttf");
+        Typeface chalkboard = Typeface.createFromAsset(getAssets(), "fonts/Chalkboard.ttf");
+        Typeface chalkduster = Typeface.createFromAsset(getAssets(), "fonts/Chalkduster.ttf");
         TextView titleTV = (TextView) findViewById(R.id.titleTV);
-        titleTV.setTypeface(chalkboard);
+        titleTV.setTypeface(chalkboardBold);
+        TextView companyDescTv = (TextView) findViewById(R.id.companyDescTv);
+        companyDescTv.setTypeface(chalkboard);
+        companyDescTv.setMovementMethod(new ScrollingMovementMethod());
+        TextView horarioTv = (TextView) findViewById(R.id.horarioTv);
+        horarioTv.setTypeface(chalkduster);
+        TextView horarioDescTv = (TextView) findViewById(R.id.horarioDescTv);
+        horarioDescTv.setTypeface(chalkboard);
     }
 
     public void call(View v) {
-        Log.d("teste", "call xpto");
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:923567288"));
+        startActivity(intent);
     }
 }
