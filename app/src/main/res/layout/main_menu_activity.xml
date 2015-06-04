@@ -11,18 +11,30 @@
         android:layout_centerHorizontal="true"
         android:scaleType="fitXY" />
 
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/info_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="showInfo"/>
+
     <TextView
         android:id="@+id/titleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="Amarelinha Hamburguer's"
-        android:textSize="26sp"
+        android:textSize="18sp"
         android:textColor="#404041"/>
 
     <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -30,13 +42,13 @@
         android:layout_above="@+id/telhaBottom">
 
         <ImageView
+            android:id="@+id/menusImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="5dp"
             android:clickable="true"
-            android:onClick="openMenu"
-            android:src="@drawable/menus"/>
+            android:onClick="openMenu"/>
 
         <View
             android:layout_width="match_parent"
@@ -46,13 +58,13 @@
             android:background="@android:color/white"/>
 
         <ImageView
+            android:id="@+id/cartaoRefeicaoImage"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:clickable="true"
-            android:onClick="openCard"
-            android:src="@drawable/cartao_refeicao"/>
+            android:onClick="openCard"/>
 
         <View
             android:layout_width="match_parent"
@@ -62,13 +74,13 @@
             android:background="@android:color/white"/>
 
         <ImageView
+            android:id="@+id/contactosImage"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:clickable="true"
-            android:onClick="openContacts"
-            android:src="@drawable/contactos"/>
+            android:onClick="openContacts"/>
 
     </LinearLayout>
 

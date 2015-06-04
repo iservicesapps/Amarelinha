@@ -31,6 +31,7 @@
         android:layout_above="@+id/telhaBottom"
         android:numColumns="1"
         android:listSelector="@drawable/grid_selector"
+        android:verticalSpacing="20dp"
         android:stretchMode="columnWidth"/>
 
     <ImageView
@@ -41,5 +42,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:src="@drawable/order_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:onClick="makeCall"/>
 
 </RelativeLayout>
