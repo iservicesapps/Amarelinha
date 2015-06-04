@@ -29,8 +29,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="Amarelinha Hamburguer's"
-        android:textSize="18sp"
+        android:text="Bem-Vindo"
+        android:textSize="26sp"
         android:textColor="#404041"/>
 
     <LinearLayout

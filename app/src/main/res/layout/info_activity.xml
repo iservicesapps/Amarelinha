@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/telhaTop"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/telha"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Amarelinha Hamburguer's"
+        android:textSize="22sp"
+        android:textColor="#404041"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/telhaTop"
+        android:layout_above="@+id/telhaBottom">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/companyDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="vertical"
+            android:text="Amarelinha Hamburguer's é uma pequena empresa de jovens angolanos que nasceu de um sonho... Fazer os melhores lanches da cidade (Hamburgueres, Bifanas, Pregos, Fahitas, entre outros) e prestar um bom serviço aos seus clientes!\n\nEm 2012 começavamos esta aventura!\n\nO nosso objectivo é de proporcionar aos Angolanos, um serviço fidedigno e com qualidade, prestar um serviço personalizado e eficiente.\n\nTemos sempre como objectivo, a qualidade da oferta, a eficiência do serviço e a satisfação do cliente, por isso, colocamos todo o nosso amor no nosso producto.\n\n\nOs nossos Produtos são artesanais (produzimos a nossa própria carne e muito em breve os seremos nós a produzir o nosso pão), tudo feito com bastante amor e carinho.\n\n\nAgora que já sabe um pouco a nosso respeito esteja atento às nossas redes sociais, participe nos nossos passatempos com direito a lanches de oferta e sempre que fizer uma compra, peça o seu código para inserir na zona do 'cartão de refeição', quando acumular 10 códigos terá direito a um lanche de oferta à sua escolha."/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/telhaBottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/telhas_rotated"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

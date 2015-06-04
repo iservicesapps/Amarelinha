@@ -48,16 +48,50 @@
             android:gravity="center"
             android:text="Seg - Sex:\nDas 9h às 22h\n\nSábado:\nDas 9h às 23h"/>
 
-        <Button
-            android:id="@+id/callBt"
-            android:layout_width="150dp"
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="Telefonar"
-            android:textColor="#FFFFFF"
-            android:onClick="call"
-            android:background="@drawable/call_button_shape"
+            android:clickable="true"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center"/>
+            android:src="@drawable/call_button"
+            android:onClick="call"/>
+
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Partilhar"
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="100dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/facebook"
+                android:clickable="true"
+                android:onClick="openFacebook"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/instagram"
+                android:clickable="true"
+                android:onClick="openInstagram"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
