@@ -23,6 +23,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ContactsActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".FoodMenuActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

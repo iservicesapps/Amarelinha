@@ -26,59 +26,38 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_below="@+id/telhaTop"
         android:layout_above="@+id/telhaBottom">
 
+        <TextView
+            android:id="@+id/horarioTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Horário"
+            android:textSize="24sp"/>
 
         <TextView
-            android:id="@+id/companyDescTv"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:id="@+id/horarioDescTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
             android:gravity="center"
-            android:scrollbars="vertical"
-            android:text="Amarelinha Hamburguer's é uma pequena empresa de jovens angolanos que nasceu de um sonho... Fazer os melhores lanches da cidade (Hamburgueres, Bifanas, Pregos, Fahitas, entre outros) e prestar um bom serviço aos seus clientes!\nEm 2012 começavamos esta aventura!\n\nO nosso objectivo é de proporcionar aos Angolanos, um serviço fidedigno e com qualidade, prestar um serviço personalizado e eficiente.\n\nTemos sempre como objectivo, a qualidade da oferta, a eficiência do serviço e a satisfação do cliente, por isso, colocamos todo o nosso amor no nosso producto.\n\n\nOs nossos Produtos são artesanais (produzimos a nossa própria carne e muito em breve os seremos nós a produzir o nosso pão), tudo feito com bastante amor e carinho.\n\n\nAgora que já sabe um pouco a nosso respeito esteja atento às nossas redes sociais, participe nos nossos passatempos com direito a lanches de oferta e sempre que fizer uma compra, peça o seu código para inserir na zona do &quot;cartão de refeição&quot;, quando acumular 10 códigos terá direito a um lanche de oferta à sua escolha." />
+            android:text="Seg - Sex:\nDas 9h às 22h\n\nSábado:\nDas 9h às 23h"/>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/horarioTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:text="Horário"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:id="@+id/horarioDescTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:text="Seg - Sex:\n9am às 10pm\n\nSábado:\n9pm às 11pm"/>
-
-            <Button
-                android:id="@+id/callBt"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Telefonar"
-                android:textColor="#FFFFFF"
-                android:onClick="call"
-                android:background="@drawable/call_button_shape"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"/>
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/callBt"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Telefonar"
+            android:textColor="#FFFFFF"
+            android:onClick="call"
+            android:background="@drawable/call_button_shape"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
