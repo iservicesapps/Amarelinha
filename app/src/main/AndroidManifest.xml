@@ -27,6 +27,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".InfoActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".MealCard"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -63,17 +63,15 @@ public class MainMenuActivity extends Activity {
     }
 
     public void openMenu(View v) {
-        Intent mainIntent = new Intent(this, FoodMenuActivity.class);
-        startActivity(mainIntent);
+        startActivity(new Intent(this, FoodMenuActivity.class));
     }
 
     public void openCard(View v) {
-        Log.d("teste", "card!");
+        startActivity(new Intent(this, MealCard.class));
     }
 
     public void openContacts(View v) {
-        Intent mainIntent = new Intent(this, ContactsActivity.class);
-        startActivity(mainIntent);
+        startActivity(new Intent(this, ContactsActivity.class));
     }
 
     public void showInfo(View v) {
