@@ -58,7 +58,9 @@ public class FoodGridViewAdapter extends BaseAdapter {
 
         convertView = LayoutInflater.from(context).inflate(R.layout.food_item, null);
         ImageView foodImage = (ImageView) convertView.findViewById(R.id.foodImage);
-        Picasso.with(context).load(f.getImage()).resize(width, getHeightWithRacio(f.getImage())).into(foodImage);
+
+        int resImage = context.getResources().getIdentifier(f.getImage(), "drawable", "pt.iservices.amarelinha");
+        Picasso.with(context).load(resImage).resize(width, getHeightWithRacio(resImage)).into(foodImage);
 
         TextView foodNameTv = (TextView) convertView.findViewById(R.id.foodNameTv);
         foodNameTv.setTypeface(chalkduster);

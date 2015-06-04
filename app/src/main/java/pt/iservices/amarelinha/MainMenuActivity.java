@@ -108,17 +108,17 @@ public class MainMenuActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Hamburguer de Frango", 800));
-            db.insertCategoria(new Food(R.drawable.hamb_tuneza, "Hamburguer Tuneza", 1000));
-            db.insertCategoria(new Food(R.drawable.hamb_amarelinha, "Hamburguer Amarelinha", 800));
-            db.insertCategoria(new Food(R.drawable.hamb_carne, "Hamburguer de Carne", 900));
-            db.insertCategoria(new Food(R.drawable.fahita_mista, "Fahita Mista", 0)); // TODO preço deste
-            db.insertCategoria(new Food(R.drawable.fahita_atum, "Fahita de Atum", 900));
-            db.insertCategoria(new Food(R.drawable.fahita_carne, "Fahita de Carne", 900));
-            db.insertCategoria(new Food(R.drawable.fahita_frango, "Fahita de Frango", 900));
-            db.insertCategoria(new Food(R.drawable.prego_pao, "Prego no Pão", 900));
-            db.insertCategoria(new Food(R.drawable.bifana_pao, "Bifana no Pão", 900));
-            db.insertCategoria(new Food(R.drawable.cachorro_quente, "Cachorro Quente", 800));
+            db.insertCategoria(new Food("cartao_refeicao", "Hamburguer de Frango", 800));
+            db.insertCategoria(new Food("hamb_tuneza", "Hamburguer Tuneza", 1000));
+            db.insertCategoria(new Food("hamb_amarelinha", "Hamburguer Amarelinha", 800));
+            db.insertCategoria(new Food("hamb_carne", "Hamburguer de Carne", 900));
+            db.insertCategoria(new Food("fahita_mista", "Fahita Mista", 0)); // TODO preço deste
+            db.insertCategoria(new Food("fahita_atum", "Fahita de Atum", 900));
+            db.insertCategoria(new Food("fahita_carne", "Fahita de Carne", 900));
+            db.insertCategoria(new Food("fahita_frango", "Fahita de Frango", 900));
+            db.insertCategoria(new Food("prego_pao", "Prego no Pão", 900));
+            db.insertCategoria(new Food("bifana_pao", "Bifana no Pão", 900));
+            db.insertCategoria(new Food("cachorro_quente", "Cachorro Quente", 800));
             return null;
         }
 

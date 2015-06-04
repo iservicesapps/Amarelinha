@@ -5,24 +5,24 @@ package pt.iservices.amarelinha;
  */
 public class Food {
 
-    private String name;
-    private int price, image;
+    private String name, image;
+    private int price;
 
     public Food() {
         // default
     }
 
-    public Food(int image, String name, int price) {
+    public Food(String image, String name, int price) {
         this.image = image;
         this.name = name;
         this.price = price;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

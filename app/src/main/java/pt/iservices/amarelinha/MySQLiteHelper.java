@@ -27,7 +27,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE_TABLE_CATEGORIA = "create table "
             + TABLE_CATEGORIA + "(" + COLUMN_ID_CATEGORIA
             + " integer primary key autoincrement, " + COLUMN_IMAGE
-            + " integer, " + COLUMN_NAME
+            + " text not null, " + COLUMN_NAME
             + " text not null," + COLUMN_PRICE
             + " integer"
             + ");";
@@ -100,7 +100,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 Food f = new Food();
-                f.setImage(cursor.getInt(1));
+                f.setImage(cursor.getString(1));
                 f.setName(cursor.getString(2));
                 f.setPrice(cursor.getInt(3));
                 foods.add(f);
