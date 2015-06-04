@@ -3,18 +3,12 @@ package pt.iservices.amarelinha;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Created by mariocosme on 02/06/15.
@@ -23,7 +17,6 @@ public class MainMenuActivity extends Activity {
 
     private ProgressDialog pd;
     private MySQLiteHelper db;
-    private AQuery aq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +34,6 @@ public class MainMenuActivity extends Activity {
 
     private void setUpDB() {
         db = new MySQLiteHelper(this);
-        aq = new AQuery(this);
-
         if (!db.isDbFilled()) {
             pd = new ProgressDialog(this);
             pd.setIndeterminate(true);
@@ -55,7 +46,8 @@ public class MainMenuActivity extends Activity {
     }
 
     public void openMenu(View v) {
-        Log.d("teste", "menu!");
+        Intent mainIntent = new Intent(this, FoodMenuActivity.class);
+        startActivity(mainIntent);
     }
 
     public void openCard(View v) {
@@ -77,44 +69,17 @@ public class MainMenuActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            aq.ajax(URL_GET_CONTENT, JSONObject.class, new AjaxCallback<JSONObject>() {
-
-                @Override
-                public void callback(String url, JSONObject json, AjaxStatus status) {
-                    try {
-
-                        if (json != null) {
-                            db.resetDB();
-
-                            JSONArray categorias = json.getJSONArray("categorias");
-
-                            for (int i = 0; i < categorias.length(); i++) {
-                                JSONObject obj = categorias.getJSONObject(i);
-                                db.insertCategoria(new Categoria(obj.getInt("id_categoria"), obj.getInt("active"), obj.getString("name"), obj.getString("image")));
-                            }
-
-                            JSONArray motivos = json.getJSONArray("motivos");
-                            for (int i = 0; i < motivos.length(); i++) {
-                                JSONObject obj = motivos.getJSONObject(i);
-                                db.insertMotivo(new Motivo(obj.getInt("id_motivo"), obj.getInt("id_categoria"), obj.getInt("width"), obj.getInt("height"), obj.getInt("active"), obj.getString("name"), obj.getString("image")));
-                            }
-
-                            editor.putInt("db_version", version);
-                            editor.commit();
-
-                            // Already skipped login
-                            if (PreferenceManager.getDefaultSharedPreferences(LogInActivity.this).getBoolean("skiped_login", false) || PreferenceManager.getDefaultSharedPreferences(LogInActivity.this).getBoolean("facebook_login", false)) {
-                                Intent i = new Intent(LogInActivity.this, ChooseCategoryActivity.class);
-                                startActivity(i);
-                                finish();
-                            }
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Hamburguer de Frango", 800));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Hamburguer Tuneza", 1000));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Hamburguer Amarelinha", 800));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Hamburguer de Carne", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Fahita Mista", 0)); // TODO preço deste
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Fahita de Atum", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Fahita de Carne", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Fahita de Frango", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Prego no Pão", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Bifana no Pão", 900));
+            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Cachorro Quente", 800));
             return null;
         }
 

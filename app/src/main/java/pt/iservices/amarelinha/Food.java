@@ -1,7 +1,5 @@
 package pt.iservices.amarelinha;
 
-import android.graphics.drawable.Drawable;
-
 /**
  * Created by mariocosme on 04/06/15.
  */

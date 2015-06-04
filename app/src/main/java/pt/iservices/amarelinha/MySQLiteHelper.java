@@ -100,9 +100,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 Food f = new Food();
-                f.setImage(cursor.getInt(0));
-                f.setName(cursor.getString(1));
-                f.setPrice(cursor.getInt(2));
+                f.setImage(cursor.getInt(1));
+                f.setName(cursor.getString(2));
+                f.setPrice(cursor.getInt(3));
                 foods.add(f);
             } while (cursor.moveToNext());
         }
