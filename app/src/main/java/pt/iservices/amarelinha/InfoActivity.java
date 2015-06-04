@@ -20,5 +20,9 @@ public class InfoActivity extends Activity {
         TextView companyDesc = (TextView) findViewById(R.id.companyDesc);
         companyDesc.setTypeface(chalkboard);
         companyDesc.setMovementMethod(new ScrollingMovementMethod());
+
+        Typeface chalkboardBold = Typeface.createFromAsset(getAssets(), "fonts/Chalkboard-Bold.ttf");
+        TextView titleTV = (TextView) findViewById(R.id.titleTV);
+        titleTV.setTypeface(chalkboardBold);
     }
 }

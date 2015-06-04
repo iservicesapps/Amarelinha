@@ -115,10 +115,10 @@ public class MainMenuActivity extends Activity {
             db.insertCategoria(new Food(R.drawable.fahita_mista, "Fahita Mista", 0)); // TODO preço deste
             db.insertCategoria(new Food(R.drawable.fahita_atum, "Fahita de Atum", 900));
             db.insertCategoria(new Food(R.drawable.fahita_carne, "Fahita de Carne", 900));
-            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Fahita de Frango", 900));
-            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Prego no Pão", 900));
-            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Bifana no Pão", 900));
-            db.insertCategoria(new Food(R.drawable.cartao_refeicao, "Cachorro Quente", 800));
+            db.insertCategoria(new Food(R.drawable.fahita_frango, "Fahita de Frango", 900));
+            db.insertCategoria(new Food(R.drawable.prego_pao, "Prego no Pão", 900));
+            db.insertCategoria(new Food(R.drawable.bifana_pao, "Bifana no Pão", 900));
+            db.insertCategoria(new Food(R.drawable.cachorro_quente, "Cachorro Quente", 800));
             return null;
         }
 

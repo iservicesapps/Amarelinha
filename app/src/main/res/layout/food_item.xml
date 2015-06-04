@@ -14,7 +14,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/food_desc_bg">
 
         <TextView
             android:id="@+id/foodNameTv"
@@ -24,19 +25,6 @@
             android:textColor="@android:color/white"
             android:gravity="center"
             android:textSize="16sp"/>
-
-        <LinearLayout
-            android:layout_width="1dp"
-            android:layout_height="match_parent">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-
-        </LinearLayout>
 
         <TextView
             android:id="@+id/foodPriceTv"
