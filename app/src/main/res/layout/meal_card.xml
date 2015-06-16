@@ -142,4 +142,15 @@
         android:layout_centerHorizontal="true"
         android:scaleType="fitXY" />
 
+    <ImageView
+        android:id="@+id/insertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/insert_code"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:onClick="insertCode"/>
+
 </RelativeLayout>
